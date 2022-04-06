@@ -1,0 +1,29 @@
+version: '3'
+services:
+  vault:
+    networks:
+      - internal
+    image: vault:latest
+    ports:
+      - 8200:8200
+    entrypoint: vault server -config=/vault/config/vault.json
+    cap_add:
+      - ipc_lock
+    volumes:
+      - ./vault/crypto:/certs
+      - ./vault/config.json:/vault/config/vault.json
+  server:
+    networks:
+      - internal
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - vault
+    ports:
+      - 8080:8080
+    links:
+      - vault
+networks:
+  internal:
+    driver: bridge

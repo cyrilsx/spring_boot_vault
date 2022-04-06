@@ -1,0 +1,1 @@
+{"backend":{"file":{"path": "/vault/file"}},"listener":{"tcp":{"address": "0.0.0.0:8200","cluster_address":"0.0.0.0:8201","tls_disable": 0, "tls_cert_file":"/certs/work/ca/certs/vault.cert.pem","tls_key_file":"/certs/work/ca/private/vault.decrypted.key.pem"}},"ui": true,"disable_mlock":true}
