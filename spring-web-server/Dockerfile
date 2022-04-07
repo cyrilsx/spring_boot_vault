@@ -1,6 +1,5 @@
 # Build the WAR file with Maven
-#FROM maven:3.6-jdk-10 AS build
-FROM docker-commons.zas.admin.ch/zas/cicd/maven:3.8-jdk-11-1.0.0 as build
+FROM maven:3.6-jdk-10 AS build
 
 COPY spring-web-server/ /usr/src/
 WORKDIR /usr/src/

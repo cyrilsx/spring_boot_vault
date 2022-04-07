@@ -5,12 +5,5 @@ spring.cloud.vault:
   uri: https://vault:8200
   connection-timeout: 5000
   read-timeout: 15000
-  token: hvs.plCwvvZSCpgbSHO89vfJBzbp
-spring.config.import: vault://
-spring:
-  application:
-    name: spring-boot-example
-  cloud:
-    vault:
-      kv:
-        default-context:  apps
+  token: hvs.9Vt8YckP5gH53aLtF8XxabYl
+spring.config.import: vault://spring-boot-example/apps

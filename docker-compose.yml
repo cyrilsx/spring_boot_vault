@@ -17,7 +17,7 @@ services:
       - internal
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: spring-web-server/Dockerfile
     depends_on:
       - vault
     ports:
