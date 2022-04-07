@@ -28,6 +28,15 @@ Dependencies required for the tasks:
 </dependencies>
 </dependencyManagement>
 ```
+
+## Using properties in spring
+Usage like any properties in a spring boot app.
+```java
+@Value("${app.security.key}")
+private String secureKey;
+```
+
+
 ## Running the example using docker
 
 Start vault using the `docker-compose.yml` file. 
@@ -51,5 +60,8 @@ Start it:
 2022-04-07 21:36:44.896  INFO 12743 --- [  restartedMain] c.e.s.SpringWebServerApplication         : Started SpringWebServerApplication in 1.946 seconds (JVM running for 2.498)
 secure key: test
 ```
+
+## External links
+https://cloud.spring.io/spring-cloud-vault/reference/html/
 
 
